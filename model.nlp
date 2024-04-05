@@ -1,0 +1,1250 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi,there": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "day,good,hello": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "book,i,ticket,to,treck,want": {
+            "intent": "ticketBooking",
+            "domain": "default"
+          },
+          "book,tick,trek": {
+            "intent": "ticketBooking",
+            "domain": "default"
+          },
+          "hike,reserv,spot": {
+            "intent": "ticketBooking",
+            "domain": "default"
+          },
+          "pleas,ticket,trekk": {
+            "intent": "ticketBooking",
+            "domain": "default"
+          },
+          "place,secur,trek": {
+            "intent": "ticketBooking",
+            "domain": "default"
+          },
+          "adult": {
+            "intent": "adultTicket",
+            "domain": "default"
+          },
+          "4,adult,book,i,ticket,to,want": {
+            "intent": "adultnoOfTickets",
+            "domain": "default"
+          },
+          "5,adult,book,ticket": {
+            "intent": "adultnoOfTickets",
+            "domain": "default"
+          },
+          "3,adult,slot": {
+            "intent": "adultnoOfTickets",
+            "domain": "default"
+          },
+          "2,adult": {
+            "intent": "adultnoOfTickets",
+            "domain": "default"
+          },
+          "1,adult,i,need,ticket": {
+            "intent": "adultnoOfTickets",
+            "domain": "default"
+          },
+          "child": {
+            "intent": "childTicket",
+            "domain": "default"
+          },
+          "kid": {
+            "intent": "childTicket",
+            "domain": "default"
+          },
+          "children": {
+            "intent": "childTicket",
+            "domain": "default"
+          },
+          "4,book,i,kid,ticket,to,want": {
+            "intent": "kidsnoOfTickets",
+            "domain": "default"
+          },
+          "5,book,children,ticket": {
+            "intent": "kidsnoOfTickets",
+            "domain": "default"
+          },
+          "3,kid,slot": {
+            "intent": "kidsnoOfTickets",
+            "domain": "default"
+          },
+          "2,children": {
+            "intent": "kidsnoOfTickets",
+            "domain": "default"
+          },
+          "1,child,i,need,ticket": {
+            "intent": "kidsnoOfTickets",
+            "domain": "default"
+          },
+          "12-01-2024,book,on": {
+            "intent": "date",
+            "domain": "default"
+          },
+          "30-04-2024": {
+            "intent": "date",
+            "domain": "default"
+          },
+          "15-03-2024,on,slot": {
+            "intent": "date",
+            "domain": "default"
+          },
+          "googl,pay": {
+            "intent": "payment",
+            "domain": "default"
+          },
+          "gpay": {
+            "intent": "payment",
+            "domain": "default"
+          },
+          "phonep": {
+            "intent": "payment",
+            "domain": "default"
+          },
+          "paytm": {
+            "intent": "payment",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greeting": "default",
+          "ticketBooking": "default",
+          "adultTicket": "default",
+          "adultnoOfTickets": "default",
+          "childTicket": "default",
+          "kidsnoOfTickets": "default",
+          "date": "default",
+          "payment": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi there",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello good day",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "i want to book trecking ticket",
+            "intent": "ticketBooking"
+          },
+          {
+            "domain": "default",
+            "utterance": "Book trek ticke",
+            "intent": "ticketBooking"
+          },
+          {
+            "domain": "default",
+            "utterance": "Reserve hike spot",
+            "intent": "ticketBooking"
+          },
+          {
+            "domain": "default",
+            "utterance": "Trekking ticket please",
+            "intent": "ticketBooking"
+          },
+          {
+            "domain": "default",
+            "utterance": "Secure trek place",
+            "intent": "ticketBooking"
+          },
+          {
+            "domain": "default",
+            "utterance": "Adult",
+            "intent": "adultTicket"
+          },
+          {
+            "domain": "default",
+            "utterance": "i want to book adults 4 tickets",
+            "intent": "adultnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "book 5 adult tickets",
+            "intent": "adultnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "3 adults slots",
+            "intent": "adultnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "2 adults",
+            "intent": "adultnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need 1 adult ticket",
+            "intent": "adultnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "Child",
+            "intent": "childTicket"
+          },
+          {
+            "domain": "default",
+            "utterance": "Kid",
+            "intent": "childTicket"
+          },
+          {
+            "domain": "default",
+            "utterance": "Children",
+            "intent": "childTicket"
+          },
+          {
+            "domain": "default",
+            "utterance": "Kids",
+            "intent": "childTicket"
+          },
+          {
+            "domain": "default",
+            "utterance": "i want to book kids 4 tickets",
+            "intent": "kidsnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "book 5 children tickets",
+            "intent": "kidsnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "3 kid slots",
+            "intent": "kidsnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "2 children",
+            "intent": "kidsnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need 1 child ticket",
+            "intent": "kidsnoOfTickets"
+          },
+          {
+            "domain": "default",
+            "utterance": "book on 12-01-2024",
+            "intent": "date"
+          },
+          {
+            "domain": "default",
+            "utterance": "30-04-2024",
+            "intent": "date"
+          },
+          {
+            "domain": "default",
+            "utterance": "slot on 15-03-2024 ",
+            "intent": "date"
+          },
+          {
+            "domain": "default",
+            "utterance": "Google pay",
+            "intent": "payment"
+          },
+          {
+            "domain": "default",
+            "utterance": "Gpay",
+            "intent": "payment"
+          },
+          {
+            "domain": "default",
+            "utterance": "Phonepe",
+            "intent": "payment"
+          },
+          {
+            "domain": "default",
+            "utterance": "Paytm",
+            "intent": "payment"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "hello": 1,
+              "hi": 1,
+              "hey": 1,
+              "there": 1,
+              "good": 1,
+              "day": 1,
+              "i": 1,
+              "want": 1,
+              "to": 1,
+              "book": 1,
+              "treck": 1,
+              "ticket": 1,
+              "trek": 1,
+              "tick": 1,
+              "reserv": 1,
+              "hike": 1,
+              "spot": 1,
+              "trekk": 1,
+              "pleas": 1,
+              "secur": 1,
+              "place": 1,
+              "adult": 1,
+              "slot": 1,
+              "need": 1,
+              "child": 1,
+              "kid": 1,
+              "children": 1,
+              "on": 1,
+              "12-01-2024": 1,
+              "30-04-2024": 1,
+              "15-03-2024": 1,
+              "googl": 1,
+              "pay": 1,
+              "gpay": 1,
+              "phonep": 1,
+              "paytm": 1
+            },
+            "intents": {
+              "greeting": 1,
+              "ticketBooking": 1,
+              "adultTicket": 1,
+              "adultnoOfTickets": 1,
+              "childTicket": 1,
+              "kidsnoOfTickets": 1,
+              "date": 1,
+              "payment": 1
+            },
+            "intentFeatures": {
+              "greeting": {
+                "hello": 1,
+                "hi": 1,
+                "hey": 1,
+                "there": 1,
+                "good": 1,
+                "day": 1
+              },
+              "ticketBooking": {
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "book": 1,
+                "treck": 1,
+                "ticket": 1,
+                "trek": 1,
+                "tick": 1,
+                "reserv": 1,
+                "hike": 1,
+                "spot": 1,
+                "trekk": 1,
+                "pleas": 1,
+                "secur": 1,
+                "place": 1
+              },
+              "adultTicket": {
+                "adult": 1
+              },
+              "adultnoOfTickets": {
+                "1": 1,
+                "2": 1,
+                "3": 1,
+                "4": 1,
+                "5": 1,
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "book": 1,
+                "adult": 1,
+                "ticket": 1,
+                "slot": 1,
+                "need": 1
+              },
+              "childTicket": {
+                "child": 1,
+                "kid": 1,
+                "children": 1
+              },
+              "kidsnoOfTickets": {
+                "1": 1,
+                "2": 1,
+                "3": 1,
+                "4": 1,
+                "5": 1,
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "book": 1,
+                "kid": 1,
+                "ticket": 1,
+                "children": 1,
+                "slot": 1,
+                "need": 1,
+                "child": 1
+              },
+              "date": {
+                "book": 1,
+                "on": 1,
+                "12-01-2024": 1,
+                "30-04-2024": 1,
+                "slot": 1,
+                "15-03-2024": 1
+              },
+              "payment": {
+                "googl": 1,
+                "pay": 1,
+                "gpay": 1,
+                "phonep": 1,
+                "paytm": 1
+              }
+            },
+            "featuresToIntent": {
+              "1": [
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "2": [
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "3": [
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "4": [
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "5": [
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "hello": [
+                "greeting"
+              ],
+              "hi": [
+                "greeting"
+              ],
+              "hey": [
+                "greeting"
+              ],
+              "there": [
+                "greeting"
+              ],
+              "good": [
+                "greeting"
+              ],
+              "day": [
+                "greeting"
+              ],
+              "i": [
+                "ticketBooking",
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "want": [
+                "ticketBooking",
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "to": [
+                "ticketBooking",
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "book": [
+                "ticketBooking",
+                "adultnoOfTickets",
+                "kidsnoOfTickets",
+                "date"
+              ],
+              "treck": [
+                "ticketBooking"
+              ],
+              "ticket": [
+                "ticketBooking",
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "trek": [
+                "ticketBooking"
+              ],
+              "tick": [
+                "ticketBooking"
+              ],
+              "reserv": [
+                "ticketBooking"
+              ],
+              "hike": [
+                "ticketBooking"
+              ],
+              "spot": [
+                "ticketBooking"
+              ],
+              "trekk": [
+                "ticketBooking"
+              ],
+              "pleas": [
+                "ticketBooking"
+              ],
+              "secur": [
+                "ticketBooking"
+              ],
+              "place": [
+                "ticketBooking"
+              ],
+              "adult": [
+                "adultTicket",
+                "adultnoOfTickets"
+              ],
+              "slot": [
+                "adultnoOfTickets",
+                "kidsnoOfTickets",
+                "date"
+              ],
+              "need": [
+                "adultnoOfTickets",
+                "kidsnoOfTickets"
+              ],
+              "child": [
+                "childTicket",
+                "kidsnoOfTickets"
+              ],
+              "kid": [
+                "childTicket",
+                "kidsnoOfTickets"
+              ],
+              "children": [
+                "childTicket",
+                "kidsnoOfTickets"
+              ],
+              "on": [
+                "date"
+              ],
+              "12-01-2024": [
+                "date"
+              ],
+              "30-04-2024": [
+                "date"
+              ],
+              "15-03-2024": [
+                "date"
+              ],
+              "googl": [
+                "payment"
+              ],
+              "pay": [
+                "payment"
+              ],
+              "gpay": [
+                "payment"
+              ],
+              "phonep": [
+                "payment"
+              ],
+              "paytm": [
+                "payment"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi",
+                "hey",
+                "there",
+                "good",
+                "day",
+                "i",
+                "want",
+                "to",
+                "book",
+                "treck",
+                "ticket",
+                "trek",
+                "tick",
+                "reserv",
+                "hike",
+                "spot",
+                "trekk",
+                "pleas",
+                "secur",
+                "place",
+                "adult",
+                "4",
+                "5",
+                "3",
+                "slot",
+                "2",
+                "1",
+                "need",
+                "child",
+                "kid",
+                "children",
+                "on",
+                "12-01-2024",
+                "30-04-2024",
+                "15-03-2024",
+                "googl",
+                "pay",
+                "gpay",
+                "phonep",
+                "paytm"
+              ],
+              "intents": [
+                "greeting",
+                "ticketBooking",
+                "adultTicket",
+                "adultnoOfTickets",
+                "childTicket",
+                "kidsnoOfTickets",
+                "date",
+                "payment"
+              ],
+              "perceptrons": [
+                [
+                  11.43343734741211,
+                  11.37089729309082,
+                  11.445342063903809,
+                  0.11735787242650986,
+                  0.009171166457235813,
+                  0.009171166457235813,
+                  -0.5111081600189209,
+                  -0.33987462520599365,
+                  -0.33987462520599365,
+                  -1.4855750799179077,
+                  -0.2585723102092743,
+                  -1.4055877923965454,
+                  -1.353227972984314,
+                  -0.5259833335876465,
+                  -0.9631112813949585,
+                  -0.9631112813949585,
+                  -0.9631112813949585,
+                  -0.7348499894142151,
+                  -0.7348499894142151,
+                  -0.7579091191291809,
+                  -0.7579091191291809,
+                  -2.8363001346588135,
+                  -0.03968390077352524,
+                  -0.10157261788845062,
+                  -0.5484915971755981,
+                  -1.2051955461502075,
+                  -1.0054160356521606,
+                  -0.1140669509768486,
+                  -0.1140669509768486,
+                  -2.836012601852417,
+                  -2.837822914123535,
+                  -2.8356621265411377,
+                  -0.9984714388847351,
+                  -0.3605954051017761,
+                  -2.835268974304199,
+                  -0.6344047784805298,
+                  -1.4187586307525635,
+                  -1.4187586307525635,
+                  -2.834799289703369,
+                  -2.8344640731811523,
+                  -2.8341095447540283,
+                  2.8381327528748233
+                ],
+                [
+                  -1.0120270252227783,
+                  -1.0183563232421875,
+                  -1.001068353652954,
+                  -0.335767537355423,
+                  -0.24789290130138397,
+                  -0.24789290130138397,
+                  0.22722405195236206,
+                  1.3668327331542969,
+                  1.3668327331542969,
+                  1.6488549709320068,
+                  5.973220348358154,
+                  2.70167875289917,
+                  7.311243534088135,
+                  4.324543476104736,
+                  4.428213596343994,
+                  4.428213596343994,
+                  4.428213596343994,
+                  5.291481018066406,
+                  5.291481018066406,
+                  2.986699342727661,
+                  2.986699342727661,
+                  -3.929849624633789,
+                  -4.606387615203857,
+                  -2.8170278072357178,
+                  -0.21437367796897888,
+                  -0.46220913529396057,
+                  -0.31710416078567505,
+                  -1.139603614807129,
+                  -1.139603614807129,
+                  -1.6510915756225586,
+                  -3.7061076164245605,
+                  -2.5345964431762695,
+                  -1.4477304220199585,
+                  -1.2191635370254517,
+                  -1.0216902494430542,
+                  -0.20600640773773193,
+                  -0.6305811405181885,
+                  -0.6305811405181885,
+                  -1.0081337690353394,
+                  -1.0036907196044922,
+                  -1.001646637916565,
+                  1.0010715393789973
+                ],
+                [
+                  -0.9398152828216553,
+                  -0.9387076497077942,
+                  -0.9375704526901245,
+                  -0.12341786921024323,
+                  -0.07653770595788956,
+                  -0.07653770595788956,
+                  -2.6679370403289795,
+                  -0.323367714881897,
+                  -0.323367714881897,
+                  -3.838164806365967,
+                  0,
+                  -6.157217979431152,
+                  -0.3173190951347351,
+                  0,
+                  -0.3173961937427521,
+                  -0.3173961937427521,
+                  -0.3173961937427521,
+                  0,
+                  0,
+                  -0.3173190951347351,
+                  -0.3173190951347351,
+                  12.533198356628418,
+                  -0.323367714881897,
+                  -3.4844889640808105,
+                  -6.702392578125,
+                  -6.722089767456055,
+                  -13.231149673461914,
+                  -2.3257651329040527,
+                  -2.3257651329040527,
+                  -0.9487409591674805,
+                  -0.9571403861045837,
+                  -0.9473263025283813,
+                  -0.023430779576301575,
+                  -0.005957327783107758,
+                  -0.9459735155105591,
+                  -0.013231752440333366,
+                  -0.47795403003692627,
+                  -0.47795403003692627,
+                  -0.9445480108261108,
+                  -0.9435173869132996,
+                  -0.9424686431884766,
+                  0.9599956943396989
+                ],
+                [
+                  -0.16713595390319824,
+                  -0.18080578744411469,
+                  -0.10291238129138947,
+                  -0.06948788464069366,
+                  -0.050488732755184174,
+                  -0.050488732755184174,
+                  2.165540933609009,
+                  -0.36239832639694214,
+                  -0.36239832639694214,
+                  3.193392276763916,
+                  -3.0915169715881348,
+                  5.796572685241699,
+                  -0.2226777821779251,
+                  -0.18466942012310028,
+                  -0.049556344747543335,
+                  -0.049556344747543335,
+                  -0.049556344747543335,
+                  -0.42890000343322754,
+                  -0.42890000343322754,
+                  -0.024878961965441704,
+                  -0.024878961965441704,
+                  8.389786720275879,
+                  2.7325024604797363,
+                  4.080381870269775,
+                  6.780571937561035,
+                  6.327593803405762,
+                  12.891857147216797,
+                  2.526686191558838,
+                  2.526686191558838,
+                  -5.6184000968933105,
+                  -5.8226704597473145,
+                  -5.696458339691162,
+                  -0.7570667266845703,
+                  -0.2815502882003784,
+                  -0.14697283506393433,
+                  -0.4342634677886963,
+                  -0.10706527531147003,
+                  -0.10706527531147003,
+                  -0.12417178601026535,
+                  -0.11945602297782898,
+                  -0.11491800844669342,
+                  -7.290828644236288
+                ],
+                [
+                  -2.958056926727295,
+                  -2.9573347568511963,
+                  -2.95654034614563,
+                  -0.5911648273468018,
+                  -0.4041963815689087,
+                  -0.4041963815689087,
+                  -3.4760005474090576,
+                  -1.0834846496582031,
+                  -1.0834846496582031,
+                  -4.357391834259033,
+                  0,
+                  -6.528273105621338,
+                  -1.0188357830047607,
+                  -0.030735449865460396,
+                  -0.9883696436882019,
+                  -0.9883696436882019,
+                  -0.9883696436882019,
+                  -0.027182430028915405,
+                  -0.027182430028915405,
+                  -0.9730744361877441,
+                  -0.9730744361877441,
+                  -2.95538330078125,
+                  -1.0834846496582031,
+                  -3.0109705924987793,
+                  -7.0323991775512695,
+                  -7.270426273345947,
+                  -13.754627227783203,
+                  -2.3791627883911133,
+                  -2.3791627883911133,
+                  11.329713821411133,
+                  11.315170288085938,
+                  10.951546669006348,
+                  -0.41991427540779114,
+                  -0.1762542575597763,
+                  -2.961796998977661,
+                  -0.20205554366111755,
+                  -1.4836411476135254,
+                  -1.4836411476135254,
+                  -2.9609432220458984,
+                  -2.9602949619293213,
+                  -2.9596240520477295,
+                  2.969296368360087
+                ],
+                [
+                  -0.5213595628738403,
+                  -0.529339611530304,
+                  -0.3337719738483429,
+                  -0.1871834546327591,
+                  -0.17081570625305176,
+                  -0.17081570625305176,
+                  2.363910436630249,
+                  -0.7540515661239624,
+                  -0.7540515661239624,
+                  3.070542573928833,
+                  -5.3324503898620605,
+                  6.017265796661377,
+                  -0.5854656100273132,
+                  -0.4763774871826172,
+                  -0.16888613998889923,
+                  -0.16888613998889923,
+                  -0.16888613998889923,
+                  -1.2945109605789185,
+                  -1.2945109605789185,
+                  -0.07026496529579163,
+                  -0.07026496529579163,
+                  -10.014132499694824,
+                  4.57867431640625,
+                  4.967250347137451,
+                  7.722595691680908,
+                  6.777811050415039,
+                  13.973164558410645,
+                  3.1181747913360596,
+                  3.1181747913360596,
+                  4.278146266937256,
+                  4.391201972961426,
+                  4.82016134262085,
+                  -1.580517292022705,
+                  -0.5480577349662781,
+                  -0.45342588424682617,
+                  -0.9421273469924927,
+                  -0.3421567976474762,
+                  -0.3421567976474762,
+                  -0.3986317813396454,
+                  -0.38404443860054016,
+                  -0.3699834942817688,
+                  -4.610916049963338
+                ],
+                [
+                  -1.414852499961853,
+                  -1.4148391485214233,
+                  -1.4147981405258179,
+                  -0.3543536365032196,
+                  -0.2671632766723633,
+                  -0.2671632766723633,
+                  -0.47720766067504883,
+                  -0.46274951100349426,
+                  -0.46274951100349426,
+                  1.4724040031433105,
+                  -0.37177976965904236,
+                  -1.2634317874908447,
+                  -1.554598093032837,
+                  -1.3455157279968262,
+                  -0.47162196040153503,
+                  -0.47162196040153503,
+                  -0.47162196040153503,
+                  -0.14398188889026642,
+                  -0.14398188889026642,
+                  -0.18823526799678802,
+                  -0.18823526799678802,
+                  -1.4737316370010376,
+                  -0.07121242582798004,
+                  -0.5948686003684998,
+                  -1.791727066040039,
+                  1.7936019897460938,
+                  -0.2507181167602539,
+                  -0.00953980628401041,
+                  -0.00953980628401041,
+                  -1.4147486686706543,
+                  -1.4167195558547974,
+                  -1.4147359132766724,
+                  7.491898059844971,
+                  3.9065678119659424,
+                  12.870481491088867,
+                  3.585330009460449,
+                  -0.7286392450332642,
+                  -0.7286392450332642,
+                  -1.414936900138855,
+                  -1.4148751497268677,
+                  -1.4148595333099365,
+                  1.4148709263894321
+                ],
+                [
+                  -3.324169397354126,
+                  -3.3240716457366943,
+                  -3.32382869720459,
+                  -0.8800891041755676,
+                  -0.6451026201248169,
+                  -0.6451026201248169,
+                  -0.42412233352661133,
+                  -0.27852320671081543,
+                  -0.27852320671081543,
+                  -1.5246962308883667,
+                  -0.22778847813606262,
+                  -1.4738324880599976,
+                  -1.514386773109436,
+                  -0.5829164385795593,
+                  -1.1178714036941528,
+                  -1.1178714036941528,
+                  -1.1178714036941528,
+                  -0.9402443170547485,
+                  -0.9402443170547485,
+                  -0.9177250862121582,
+                  -0.9177250862121582,
+                  -3.3238139152526855,
+                  -0.02506430260837078,
+                  -0.08534006774425507,
+                  -0.48805269598960876,
+                  -1.272788405418396,
+                  -1.0876134634017944,
+                  -0.11194316297769547,
+                  -0.11194316297769547,
+                  -3.323709011077881,
+                  -3.3238470554351807,
+                  -3.323643207550049,
+                  -1.2834101915359497,
+                  -0.5157864689826965,
+                  -3.323504686355591,
+                  -0.7676239013671875,
+                  5.480950832366943,
+                  5.480950832366943,
+                  10.961760520935059,
+                  10.961628913879395,
+                  10.96146297454834,
+                  3.3238611131201985
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "hi there"
+      ],
+      [
+        "en",
+        "hello good day"
+      ],
+      [
+        "en",
+        "i want to book trecking ticket"
+      ],
+      [
+        "en",
+        "Book trek ticke"
+      ],
+      [
+        "en",
+        "Reserve hike spot"
+      ],
+      [
+        "en",
+        "Trekking ticket please"
+      ],
+      [
+        "en",
+        "Secure trek place"
+      ],
+      [
+        "en",
+        "Adult"
+      ],
+      [
+        "en",
+        "i want to book adults 4 tickets"
+      ],
+      [
+        "en",
+        "book 5 adult tickets"
+      ],
+      [
+        "en",
+        "3 adults slots"
+      ],
+      [
+        "en",
+        "2 adults"
+      ],
+      [
+        "en",
+        "i need 1 adult ticket"
+      ],
+      [
+        "en",
+        "Child"
+      ],
+      [
+        "en",
+        "Kid"
+      ],
+      [
+        "en",
+        "Children"
+      ],
+      [
+        "en",
+        "Kids"
+      ],
+      [
+        "en",
+        "i want to book kids 4 tickets"
+      ],
+      [
+        "en",
+        "book 5 children tickets"
+      ],
+      [
+        "en",
+        "3 kid slots"
+      ],
+      [
+        "en",
+        "2 children"
+      ],
+      [
+        "en",
+        "i need 1 child ticket"
+      ],
+      [
+        "en",
+        "book on 12-01-2024"
+      ],
+      [
+        "en",
+        "30-04-2024"
+      ],
+      [
+        "en",
+        "slot on 15-03-2024 "
+      ],
+      [
+        "en",
+        "Google pay"
+      ],
+      [
+        "en",
+        "Gpay"
+      ],
+      [
+        "en",
+        "Phonepe"
+      ],
+      [
+        "en",
+        "Paytm"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greeting": [
+          {
+            "answer": "Hello how can i help you"
+          }
+        ],
+        "ticketBooking": [
+          {
+            "answer": "Select the type of ticket - Adult - Rs 100 per head, Child Rs 50 per head"
+          }
+        ],
+        "adultTicket": [
+          {
+            "answer": "How many number of adult tickets you want to book"
+          }
+        ],
+        "adultnoOfTickets": [
+          {
+            "answer": "On which day do you want to book (Please specify the date in DD/MM/YYYY fromat)"
+          }
+        ],
+        "childTicket": [
+          {
+            "answer": "How many number of child tickets you want to book"
+          }
+        ],
+        "kidsnoOfTickets": [
+          {
+            "answer": "On which day do you want to book (Please specify the date in DD/MM/YYYY fromat)"
+          }
+        ],
+        "date": [
+          {
+            "answer": "Specify your payment mode -  Google Pay, PhonePe, Paytm"
+          }
+        ],
+        "payment": [
+          {
+            "answer": "You will be redirected to your payment app Thank you for booking"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
